@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nest-minikube-study-service
+spec:
+  selector:
+    app: my-nest-minikube-study
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000 # 실제 포트 번호로 변경
+  type: LoadBalancer
