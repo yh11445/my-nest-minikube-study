@@ -1,4 +1,4 @@
-# My NestJS Minikube Study
+# NestJS Mariadb Minikube Example
 
 This repository provides an example of deploying a NestJS application in a Kubernetes environment using Minikube.
 
@@ -20,7 +20,7 @@ This repository provides an example of deploying a NestJS application in a Kuber
 
 1. Build Docker image:
    ```bash
-   docker build -t my-nestjs-image:latest .
+   docker build -t nestjs-mariadb-minikube-example:latest .
    ```
 
 2. Setting Environment
@@ -35,14 +35,9 @@ This repository provides an example of deploying a NestJS application in a Kuber
 
 4. Deploy
    ```bash
-   kubectl apply -f app-env-configmap.yaml
-   kubectl apply -f mariadb-secret.yaml
-   kubectl apply -f mariadb-pvc.yaml
-   kubectl apply -f mariadb-deployment.yaml
-   kubectl apply -f mariadb-service.yaml
-   kubectl apply -f app-service.yaml
-   kubectl apply -f app-deployment.yaml
+   kubectl apply -f k8s/
    ```
+
 5. Application status check
    ```bash
    kubectl get pods

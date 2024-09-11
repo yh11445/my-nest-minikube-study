@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nest-minikube-study
+  name: nestjs-mariadb-minikube-example
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-nest-minikube-study
+      app: nestjs-mariadb-minikube-example
   template:
     metadata:
       labels:
-        app: my-nest-minikube-study
+        app: nestjs-mariadb-minikube-example
     spec:
       containers:
-        - name: my-nest-minikube-study
-          image: my-nestjs-image:latest # Dockerfile을 빌드한 이미지 이름으로 변경
+        - name: nestjs-mariadb-minikube-example
+          image: nestjs-mariadb-minikube-example:latest # Dockerfile을 빌드한 이미지 이름으로 변경
           imagePullPolicy: Never # 도커 이미지를 외부에서 가져오지 않도록 설정
           ports:
             - containerPort: 3000 # 실제 포트 번호로 변경

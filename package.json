@@ -1,10 +1,10 @@
 {
-  "name": "my-nest-minikube-study",
+  "name": "nestjs-mariadb-minikube-example",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "nestjs-mariadb-minikube-example",
+  "author": "Yeonghoon Kim <yh11445@gmail.com>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",

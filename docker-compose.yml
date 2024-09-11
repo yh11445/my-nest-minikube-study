@@ -1,10 +1,10 @@
 services:
   app:
-    container_name: my-nest-minikube-study
+    container_name: nestjs-mariadb-minikube-example
     build: .
     env_file: .env
     ports:
-      - '${PORT}:${PORT}'
+      - '${DATABASE_PORT}:${DATABASE_PORT}'
     networks:
       - app-network
     depends_on:
